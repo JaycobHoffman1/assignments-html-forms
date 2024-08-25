@@ -1,78 +1,156 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This webpage is a demonstration of HTML forms.">
-    <meta name="author" content="Jaycob Hoffman">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="This webpage is a demonstration of HTML forms.">
+        <meta name="author" content="Jaycob Hoffman">
 
-    <title>HTML Forms</title>
-</head>
+        <title>HTML Forms</title>
+    </head>
 
-<body>
-    <header>
-        <h2>HTML Forms</h2>
-    </header>
+    <body>
+        <header>
+            <h2>HTML Forms</h2>
+        </header>
 
-    <hr>
+        <hr>
 
-    <main>
-        <!-- Exploring New HTML5 Input Types -->
-         
-        <!-- Task 1: Implementing Email Input -->
-        <article>
-            <h4>Task 1: Implementing Email Input</h4>
+        <main>
+            <!-- Exploring New HTML5 Input Types -->
+            <h3>Exploring new HTML5 Input Types</h3>
+            
+            <!-- Task 1: Implementing Email Input -->
+            <article>
+                <h4>Task 1: Implementing Email Input</h4>
 
-            <section>
+                <section>
+                    <form>
+                        <label for="user-email">E-mail:</label>
+                        <input type="email" id="user-email" name="user-email" aria-label="Email" 
+                        placeholder="johndoe@example.com">
+                        <div role="alert" aria-live="assertive">Please enter a valid email.</div>
+            
+                        <button type="submit" aria-label="Submit">Submit</button>
+                    </form>
+                </section>
+            </article>
+
+            <!-- Task 2: Utilizing Number Input -->
+            <article>
+                <h4>Task 2: Utilizing Number Input</h4>
+
                 <form>
-                    <label for="user-email">E-mail:</label>
-                    <input type="email" id="user-email" name="user-email" placeholder="johndoe@example.com">
+                    <label for="user-number">Enter a number between 1 and 10:</label>
+                    <input type="number" id="user-number" name="user-number" aria-label="Number" 
+                    placeholder="e.g., '5'" min="1" max="10">
+                    <div role="alert" aria-live="assertive">Please enter a valid numeric value.</div>
         
-                    <button type="submit">Submit</button>
+                    <button type="submit" aria-label="Submit">Submit</button>
                 </form>
-            </section>
-        </article>
+            </article>
 
-        <!-- Task 2: Utilizing Number Input -->
-        <article>
-            <h4>Task 2: Utilizing Number Input</h4>
+            <!-- Task 3: Employing Date Input -->
+            <article>
+                <h4>Task 3: Employing Date Input</h4>
 
-            <form>
-                <label for="user-number">Enter a number between 1 and 10:</label>
-                <input type="number" id="user-number" name="user-number" placeholder="e.g., '5'" min="1" max="10">
-    
-                <button type="submit">Submit</button>
-            </form>
-        </article>
+                <form>
+                    <label for="user-date">Enter a date:</label>
+                    <input type="date" id="user-date" name="user-date" aria-label="Date" 
+                    min="01-01-1924" max="12-31-2124">
 
-        <!-- Task 3: Employing Date Input -->
-        <article>
-            <h4>Task 3: Employing Date Input</h4>
+                    <button type="submit" aria-label="Submit">Submit</button>
+                </form>
+            </article>
 
-            <form>
-                <label for="user-date">Enter a date:</label>
-                <input type="date" id="user-date" name="user-date" min="01-01-1924" max="12-31-2124">
+            <!-- Task 4: Enhancing User Experience with Range Input -->
+            <article>
+                <h4>Task 4: Enhancing User Experience with Range Input</h4>
 
-                <button type="submit">Submit</button>
-            </form>
-        </article>
+                <form>
+                    <label for="user-rating">
+                        Rate your satisfaction with this form (min = very dissatisfied, max = very satisfied):
+                    </label>
+                    <input type="range" id="user-rating" name="user-rating" aria-label="Satisfaction Rating" 
+                    min="0" max="10" value="5">
 
-        <!-- Task 4: Enhancing User Experience with Range Input -->
-        <article>
-            <h4>Task 4: Enhancing User Experience with Range Input</h4>
+                    <button type="submit" aria-label="Submit">Submit</button>
+                </form>
+            </article>
 
-            <form>
-                <label for="user-rating">
-                    Rate your satisfaction with this form out of 10 (min = very dissatisfied, max = very satisfied):
-                </label>
+            <hr>
 
-                <input type="range" id="user-rating" name="user-rating" min="0" max="10" value="5">
+            <!-- Building a Comprehensive Web Form -->
+            <h3>Building a Comprehensive Web Form</h3>
 
-                <button type="submit">Submit</button>
-            </form>
-        </article>
-    </main>
-</body>
+            <!-- Task 1: Creating a Selection Experience -->
+            <article>
+                <h4>Task 1: Creating a Selection Experience</h4>
 
+                <section>
+                    <form>
+                        <label>Select your favorite programming language:</label>
+        
+                        <label for="html">HTML</label>
+                        <input type="radio" id="html" name="programming-language" aria-label="HTML">
+        
+                        <label for="css">CSS</label>
+                        <input type="radio" id="css" name="programming-language" aria-label="CSS">
+        
+                        <label for="javascript">JavaScript</label>
+                        <input type="radio" id="javascript" name="programming-language" aria-label="JavaScript">
+        
+                        <label for="python">Python</label>
+                        <input type="radio" id="python" name="programming-language" aria-label="Python">
+        
+                        <label for="sql">SQL</label>
+                        <input type="radio" id="sql" name="programming-language" aria-label="SQL">
+        
+                        <button type="submit" aria-label="Submit">Submit</button>
+                    </form>
+                </section>
+
+                <section>
+                    <form>
+                        <label>Please indicate your level of coding expertise:</label>
+
+                        <label for="beginner">Beginner</label>
+                        <input type="radio" id="beginner" name="level-of-expertise" aria-label="Beginner">
+
+                        <label for="intermediate">Intermediate</label>
+                        <input type="radio" id="intermediate" name="level-of-expertise" aria-label="Intermediate">
+
+                        <label for="advanced">Advanced</label>
+                        <input type="radio" id="advanced" name="level-of-expertise" aria-label="Advanced">
+
+                        <button type="submit" aria-label="Submit">Submit</button>
+                    </form>
+                </section>
+
+                <section>
+                    <form>
+                        <label>Please indicate your preferred development platform(s):</label>
+
+                        <label for="web">Web</label>
+                        <input type="checkbox" id="web" name="level-of-expertise" aria-label="Web">
+
+                        <label for="mobile">Mobile</label>
+                        <input type="checkbox" id="mobile" name="level-of-expertise" aria-label="Mobile">
+
+                        <label for="desktop">Desktop</label>
+                        <input type="checkbox" id="desktop" name="level-of-expertise" aria-label="Desktop">
+
+                        <button type="submit" aria-label="Submit">Submit</button>
+                    </form>
+                </section>
+            </article>
+
+            <hr>
+
+            <footer>
+                <i>- by Jaycob Hoffman</i>
+            </footer>
+        </main>
+    </body>
 </html>

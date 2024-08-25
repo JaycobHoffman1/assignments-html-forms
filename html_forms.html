@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This webpage is a demonstration of HTML forms.">
+    <meta name="author" content="Jaycob Hoffman">
+
+    <title>HTML Forms</title>
+</head>
+
+<body>
+    <header>
+        <h2>HTML Forms</h2>
+    </header>
+
+    <hr>
+
+    <main>
+        <!-- Exploring New HTML5 Input Types -->
+         
+        <!-- Task 1: Implementing Email Input -->
+        <article>
+            <h4>Task 1: Implementing Email Input</h4>
+
+            <section>
+                <form>
+                    <label for="user-email">E-mail:</label>
+                    <input type="email" id="user-email" name="user-email" placeholder="johndoe@example.com">
+        
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+        </article>
+
+        <!-- Task 2: Utilizing Number Input -->
+        <article>
+            <h4>Task 2: Utilizing Number Input</h4>
+
+            <form>
+                <label for="user-number">Enter a number between 1 and 10:</label>
+                <input type="number" id="user-number" name="user-number" placeholder="e.g., '5'" min="1" max="10">
+    
+                <button type="submit">Submit</button>
+            </form>
+        </article>
+
+        <!-- Task 3: Employing Date Input -->
+        <article>
+            <h4>Task 3: Employing Date Input</h4>
+
+            <form>
+                <label for="user-date">Enter a date:</label>
+                <input type="date" id="user-date" name="user-date" min="01-01-1924" max="12-31-2124">
+
+                <button type="submit">Submit</button>
+            </form>
+        </article>
+
+        <!-- Task 4: Enhancing User Experience with Range Input -->
+        <article>
+            <h4>Task 4: Enhancing User Experience with Range Input</h4>
+
+            <form>
+                <label for="user-rating">
+                    Rate your satisfaction with this form out of 10 (min = very dissatisfied, max = very satisfied):
+                </label>
+
+                <input type="range" id="user-rating" name="user-rating" min="0" max="10" value="5">
+
+                <button type="submit">Submit</button>
+            </form>
+        </article>
+    </main>
+</body>
+
+</html>
